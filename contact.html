@@ -5,16 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #3d68b9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-form {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .show-form {
+            text-align: center;
+            cursor: pointer;
+            color: #ffffff;
+        }
+
+        .show-form:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1><b>Kontak saya disini</b></h1>
-    <br><br>
-    <p>Nomor hp : 085232832242</p>
-    <br>
-    <p>Email :reinakuba@gmail.com</p>
-    <br>
-    <p>Ig : reinhardjulius_</p>
 
-    
+    <div class="contact-info">
+        <p>Nomor hp : 085232832242</p>
+        <p>Email : reinakuba@gmail.com</p>
+        <p>Ig : reinhardjulius_</p>
+    </div>
+
+    <div class="show-form" onclick="toggleForm()">Kirim Pesan</div>
+
+    <div class="contact-form" id="contact-form">
+        <form action="#">
+            <input type="text" placeholder="Nama" required><br><br>
+            <input type="email" placeholder="Email" required><br><br>
+            <textarea placeholder="Pesan" rows="4" required></textarea><br><br>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleForm() {
+            var form = document.getElementById("contact-form");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
