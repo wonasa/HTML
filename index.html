@@ -5,56 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyek HTML</title>
     <style>
-        /* CSS styling here */
-         body {
-            font-family: Arial, sans-serif;
+        /* Reset CSS */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        header, nav, main, footer {
-            padding: 20px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+
+        /* Global styles */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            background-image: url(badminton_1.jpeg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
-            color: #fff;
         }
+
         header {
-            background-color: #000000;
+            background-color: #000;
             color: #fff;
             padding: 20px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
+
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
+
         nav ul li {
             display: inline;
             margin-right: 10px;
         }
+
         nav ul li a {
             text-decoration: none;
             color: #fff;
@@ -62,25 +47,18 @@
             border-radius: 3px;
             transition: background-color 0.3s ease;
         }
+
         nav ul li a:hover {
-            background-color: #000000;
+            background-color: #444;
         }
+
         main {
             text-align: center;
             margin-top: 20px;
         }
-        section {
-            margin-bottom: 40px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        article {
-            margin-bottom: 20px;
-        }
+
         footer {
-            background-color: #000000;
+            background-color: #000;
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -89,9 +67,7 @@
             width: 100%;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
         }
-        footer p {
-            margin: 0;
-        }
+
         img {
             max-width: 100%;
             height: auto;
@@ -99,6 +75,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
+
         img:hover {
             transform: scale(1.1);
         }
@@ -123,5 +100,22 @@
     <footer>
         <p>Hak Cipta &copy; 2024 Proyek HTML</p>
     </footer>
+
+    <script>
+        // JavaScript code for slideshow
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+    </script>
 </body>
 </html>
